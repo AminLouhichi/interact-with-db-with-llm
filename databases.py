@@ -7,7 +7,7 @@ import pyodbc
 
 # Retrieve data from dbo.Columns table and append to the list as tuples
 def database():
-    cnxn = pyodbc.connect(r'Driver=SQL Server;Server=DESKTOP-5BV9H95;Database=Data_Ready;Trusted_Connection=yes;')
+    cnxn = pyodbc.connect(r'Driver=SQL Server;Server=server;Database=data;Trusted_Connection=yes;')
     cursor = cnxn.cursor()
 
     cursor.execute("SELECT * FROM dbo.Databases")
